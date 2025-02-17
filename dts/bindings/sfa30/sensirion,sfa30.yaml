@@ -1,0 +1,15 @@
+
+description: Sensirion Formaldehyde sensor with ultra low cross-sensitivity to ethanol
+
+compatible: "sensirion,sfa30"
+
+include: i2c-device.yaml
+
+properties:
+  model:
+    type: string
+    required: true
+    description: |
+      The sensor model in use
+    enum:
+        - "sfa30"

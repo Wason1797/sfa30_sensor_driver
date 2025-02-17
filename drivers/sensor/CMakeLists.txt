@@ -1,0 +1,2 @@
+add_subdirectory_ifdef(CONFIG_SFA30 sfa30)
+add_subdirectory_ifdef(CONFIG_SENSOR sensirion_lib)

@@ -1,0 +1,9 @@
+{
+    "nrf-connect.applications": [
+        "${workspaceFolder}"
+    ],
+    "files.associations": {
+        "compare": "cpp",
+        "device.h": "c"
+    }
+}

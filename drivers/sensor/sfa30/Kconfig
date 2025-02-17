@@ -1,0 +1,5 @@
+config SFA30
+	bool "Sensirion SFA30"
+	depends on I2C
+	help
+	  Enable driver for SFA30 sensor.
