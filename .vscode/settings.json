@@ -4,6 +4,7 @@
     ],
     "files.associations": {
         "compare": "cpp",
-        "device.h": "c"
+        "device.h": "c",
+        "sfa30.h": "c"
     }
 }

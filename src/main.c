@@ -16,5 +16,21 @@ int main(void)
                 printk("Device not ready\n");
                 return 1;
         }
+
+        struct sensor_value temp, hum, hco;
+
+        while (true)
+        {
+                sensor_sample_fetch(sfa30);
+                sensor_channel_get(sfa30, SENSOR_CHAN_AMBIENT_TEMP, &temp);
+                sensor_channel_get(sfa30, SENSOR_CHAN_HUMIDITY, &hum);
+                sensor_channel_get(sfa30, SENSOR_CHAN_HCO, &hco);
+                printk("temp from sensor %f\n", sensor_value_to_float(&temp));
+                printk("hum from sensor %f\n", sensor_value_to_float(&hum));
+                printk("hco from sensor %f\n", sensor_value_to_float(&hco));
+                k_sleep(K_MSEC(6000));
+        }
+
+
         return 0;
 }

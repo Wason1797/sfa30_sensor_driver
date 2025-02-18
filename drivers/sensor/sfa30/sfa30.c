@@ -213,7 +213,6 @@ static int sfa30_init(const struct device *dev)
 
     error = sfa3x_start_continuous_measurement(&cfg->bus);
 
-    k_sleep(K_MSEC(500));
     return error;
 }
 
